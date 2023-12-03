@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ChangeEvent, FC, useEffect, useState } from "react"
-import { Link, useLocation, useNavigate, useParams, useRoutes } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { ElementType } from "../types/element";
 
 const Category: FC = () => {
