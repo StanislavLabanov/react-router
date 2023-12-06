@@ -2,7 +2,7 @@ import { FC, FormEvent } from "react"
 import { useAuth } from "../context/lib"
 import { useLocation, useNavigate } from "react-router-dom"
 
-const Login: FC = () => {
+export const Login: FC = () => {
    const navigate = useNavigate()
    const location = useLocation()
    const value = useAuth()
@@ -22,5 +22,3 @@ const Login: FC = () => {
       </form>
    )
 }
-
-export default Login
