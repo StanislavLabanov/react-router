@@ -8,7 +8,7 @@ export const Category: FC = () => {
    const params = useParams()
    const observer = useRef<IntersectionObserver | null>(null)
    const { loading, error, list, hasMore, setPageNumber } = useSearchData(params.name as queryTypes)
-   console.log(list)
+
    const lastNodeRef = useCallback((node: HTMLLIElement) => {
       if (loading) return
       if (observer.current) {
