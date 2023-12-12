@@ -1,5 +1,5 @@
-import AuthProvider from './context/AuthProvider';
-import RoutesComponent from './routes/RoutesComponent';
+import { AuthProvider } from "./context/auth"
+import { RoutesComponent } from "./routes"
 
 function App() {
   return (

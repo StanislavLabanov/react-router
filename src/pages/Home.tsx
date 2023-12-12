@@ -1,5 +1,6 @@
 import { FC } from "react"
+import { Typography } from 'antd';
 
 export const Home: FC = () => {
-   return <h1>Здравствуйте!</h1>
+   return <Typography.Title style={{ textAlign: 'center' }}>Добро пожаловать!</Typography.Title>
 }

@@ -1,10 +1,11 @@
+import { Typography } from "antd";
 import { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
    children: ReactNode
 }
 
-class ErrorBoundary extends Component<Props, { hasError: boolean }> {
+export class ErrorBoundary extends Component<Props, { hasError: boolean }> {
    constructor(props: Props) {
       super(props)
 
@@ -24,10 +25,8 @@ class ErrorBoundary extends Component<Props, { hasError: boolean }> {
 
    render() {
       if (this.state.hasError) {
-         return <h3>Произошла ошибка</h3>
+         return <Typography.Text type="danger">Ошибка...</Typography.Text>
       }
       return this.props.children
    }
 }
-
-export default ErrorBoundary

@@ -1,14 +1,13 @@
-import { FC, ReactNode, createContext, useState } from "react"
+import { FC, ReactNode, useState } from "react"
 import { singIn, singOut } from "./lib"
-import { callbackType, authContextProps } from "./type"
+import { callbackType } from "./type"
+import { authContext } from "../authContext"
 
 interface Props {
    children: ReactNode
 }
 
-export const authContext = createContext<undefined | authContextProps>(undefined)
-
-const AuthProvider: FC<Props> = ({ children }) => {
+export const AuthProvider: FC<Props> = ({ children }) => {
    const [user, setUser] = useState<null | string>(() => localStorage.getItem('user') || null)
 
    const valueContent = {
@@ -23,5 +22,3 @@ const AuthProvider: FC<Props> = ({ children }) => {
       </authContext.Provider>
    )
 }
-
-export default AuthProvider

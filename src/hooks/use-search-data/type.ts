@@ -1,11 +1,6 @@
 export type queryTypes = 'character' | 'location' | 'episode'
 
-export interface DataType {
-   info: Info
-   results: Result[]
-}
-
-export interface Info {
+interface Info {
    count: number
    pages: number
    next: string
@@ -20,4 +15,9 @@ export interface Result {
    characters: string[]
    url: string
    created: string
+}
+
+export interface DataType {
+   info: Info
+   results: Result[]
 }

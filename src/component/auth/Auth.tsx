@@ -1,22 +1,22 @@
 import { FC, useTransition } from "react"
 import { useNavigate } from "react-router-dom"
-import { useAuth } from "../../context/lib"
-import styles from './Auth.module.css'
+import { useAuth } from "../../hooks/use-auth"
+import { Button, Typography, Flex } from 'antd';
 
-const Auth: FC = () => {
+export const Auth: FC = () => {
    const value = useAuth()
    const navigate = useNavigate()
    const [isPending, startTransition] = useTransition()
 
    if (!value?.user) {
-      return isPending ? <h3>Loading...</h3> : <h2 className={styles.h2} onClick={() => startTransition(() => navigate('/login'))}>Зарегистрироваться</h2>
+      return isPending
+         ? <Typography.Text type="secondary">Загрузка...</Typography.Text>
+         : <Button type="primary" style={{ margin: '10px 0 10px 10px' }} onClick={() => startTransition(() => navigate('/login'))}>Зарегистрироваться</Button>
    }
    return (
-      <>
-         <h1>Здравствуйте! {value.user}</h1>
-         <button onClick={() => value.singOut(() => navigate('/'))}>Sing out</button>
-      </>
+      <Flex wrap="wrap" gap="small" style={{ margin: '10px 0 10px 10px' }}>
+         <Typography.Text type="secondary">Здравствуйте! {value.user}</Typography.Text>
+         <Button type="primary" onClick={() => value.singOut(() => navigate('/'))}>Выйти</Button>
+      </Flex>
    )
 }
-
-export default Auth

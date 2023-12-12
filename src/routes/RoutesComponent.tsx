@@ -1,14 +1,14 @@
 import { FC } from "react"
 import { Routes, Route } from 'react-router-dom';
-import Nav from "../layout/Nav";
-import PrivateRoute from "../component/PrivateRoute";
 import { Category, Home, Login, NotFound } from "./dynamicPages";
+import { PrivateRoute } from "../component/private-route";
+import { NavMenu } from "../layout/nav-menu";
 
-const RoutesComponent: FC = () => {
+export const RoutesComponent: FC = () => {
    return (
       <>
          <Routes>
-            <Route element={<Nav />}>
+            <Route element={<NavMenu />}>
                <Route path="/" element={<Home />} />
                <Route path="/:name" element={<PrivateRoute><Category /></PrivateRoute>} />
                <Route path="*" element={<NotFound />} />
@@ -18,5 +18,3 @@ const RoutesComponent: FC = () => {
       </>
    )
 }
-
-export default RoutesComponent

@@ -1,12 +1,12 @@
 import { FC, ReactNode } from "react"
-import { useAuth } from "../context/lib"
 import { Navigate, useLocation } from "react-router-dom"
+import { useAuth } from "../../hooks/use-auth"
 
 interface Props {
    children: ReactNode
 }
 
-const PrivateRoute: FC<Props> = ({ children }) => {
+export const PrivateRoute: FC<Props> = ({ children }) => {
    const location = useLocation()
    const auth = useAuth()
 
@@ -14,4 +14,3 @@ const PrivateRoute: FC<Props> = ({ children }) => {
       return <Navigate to={"/login"} state={{ from: location.pathname }} replace /> as any
    } return children as ReactNode
 }
-export default PrivateRoute

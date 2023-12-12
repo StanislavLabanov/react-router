@@ -1,5 +1,12 @@
 import { FC } from "react"
+import { Result } from 'antd';
 
 export const NotFound: FC = () => {
-   return <h1>Страница 404</h1>
+   return (
+      <Result
+         status="404"
+         title="404"
+         subTitle="Извините, похоже такой страницы не существует"
+      />
+   )
 }

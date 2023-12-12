@@ -1,8 +1,8 @@
 import { FC, useCallback, useRef, } from "react"
 import { useParams } from "react-router-dom";
-import ErrorBoundary from "../component/ErrorBoundary";
-import { useSearchData } from "../hooks/useSearchData";
-import { queryTypes } from "../hooks/type";
+import { ErrorBoundary } from "../component/error-boundary";
+import { queryTypes, useSearchData } from "../hooks/use-search-data";
+import { Typography, Menu, List } from 'antd';
 
 export const Category: FC = () => {
    const params = useParams()
@@ -28,18 +28,19 @@ export const Category: FC = () => {
 
    return (
       <>
-         <h1>{params.name?.toUpperCase()}</h1>
+         <Typography.Title style={{ textAlign: 'center' }}>{params.name?.toUpperCase()}</Typography.Title>
          <ErrorBoundary>
             <>
-               <ul>
-                  {
-                     list.map((el, index) =>
-                        <li ref={list.length === index + 1 ? lastNodeRef : undefined} key={el.id} >{el.name}</li>
-                     )
+               <List
+                  header={undefined}
+                  footer={undefined}
+                  dataSource={list}
+                  renderItem={(el, index) =>
+                     <List.Item ref={list.length === index + 1 ? lastNodeRef : undefined} key={el.id}>{el.name}</List.Item>
                   }
-               </ul>
-               {loading && <div>Loading...</div>}
-               {error && <div>Error...</div>}
+               />
+               {loading && <Typography.Text type="success">Загрузка...</Typography.Text>}
+               {error && <Typography.Text type="danger">Ошибка...</Typography.Text>}
             </>
          </ErrorBoundary>
       </>
