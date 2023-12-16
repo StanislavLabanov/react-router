@@ -1,8 +1,8 @@
 import { FC } from "react"
 import { Routes, Route } from 'react-router-dom';
-import { Category, Home, Login, NotFound } from "./dynamicPages";
-import { PrivateRoute } from "../component/private-route";
-import { NavMenu } from "../layout/nav-menu";
+import { Category, Home, Login, NotFound } from "../lib/dynamicPages";
+import { PrivateRoute } from "../../component/private-route";
+import { NavMenu } from "../../layout/nav-menu";
 
 export const RoutesComponent: FC = () => {
    return (

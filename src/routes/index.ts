@@ -1,3 +1,3 @@
-import { RoutesComponent } from "./RoutesComponent";
+import { RoutesComponent } from "./ui/RoutesComponent";
 
 export { RoutesComponent }

@@ -10,20 +10,28 @@
    "background_color": "#ffffff",
    "icons": [
       {
-         "src": "./assets/favicon.ico",
+         "src": "/public/favicon.ico",
          "sizes": "64x64",
          "type": "image/x-icon",
          "purpose": "any maskable"
       },
       {
-         "src": "./assets/logo192.png",
+         "src": "/public/logo192.png",
          "type": "image/png",
          "sizes": "192x192"
       },
       {
-         "src": "./assets/logo512.png",
+         "src": "/public/logo512.png",
          "type": "image/png",
          "sizes": "512x512"
+      }
+   ],
+   "screenshots": [
+      {
+         "src": "/public/logo512.png",
+         "type": "image/png",
+         "sizes": "512x512",
+         "form_factor": "wide"
       }
    ]
 }

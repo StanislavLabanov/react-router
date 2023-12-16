@@ -1,7 +1,7 @@
 import { FC, ReactNode, useState } from "react"
-import { singIn, singOut } from "./lib"
-import { callbackType } from "./type"
-import { authContext } from "../authContext"
+import { callbackType } from "../../type/type"
+import { authContext } from "../../lib/authContext"
+import { singIn, singOut } from "../utils/sing-hendlers"
 
 interface Props {
    children: ReactNode

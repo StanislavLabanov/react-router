@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { DataType, Result, queryTypes } from "./type"
+import { DataType, Result, queryTypes } from "../type/type"
 
 export const useSearchData = (query: queryTypes) => {
    const [loading, setLoading] = useState(false)

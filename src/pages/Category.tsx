@@ -1,8 +1,8 @@
 import { FC, useCallback, useRef, } from "react"
 import { useParams } from "react-router-dom";
-import { ErrorBoundary } from "../component/error-boundary";
 import { queryTypes, useSearchData } from "../hooks/use-search-data";
-import { Typography, Menu, List } from 'antd';
+import { Typography, List } from 'antd';
+import { ErrorBoundary } from "../component/error-boundary";
 
 export const Category: FC = () => {
    const params = useParams()

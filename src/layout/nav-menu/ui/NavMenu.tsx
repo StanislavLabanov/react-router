@@ -1,8 +1,8 @@
 import { FC, Suspense, useLayoutEffect, useState } from "react"
 import { Link, Outlet, useParams } from 'react-router-dom'
-import { Auth } from "../../component/auth"
+import { Auth } from "../../../component/auth"
 import { Layout, Menu, Typography } from 'antd';
-import { list } from "./list";
+import { list } from "../const/list";
 
 export const NavMenu: FC = () => {
    const [keyItem, setKeyItem] = useState('')

@@ -1,6 +1,6 @@
 import { FC, useTransition } from "react"
 import { useNavigate } from "react-router-dom"
-import { useAuth } from "../../hooks/use-auth"
+import { useAuth } from "../../../hooks/use-auth"
 import { Button, Typography, Flex } from 'antd';
 
 export const Auth: FC = () => {

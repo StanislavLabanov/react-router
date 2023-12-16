@@ -1,3 +1,3 @@
-import { PrivateRoute } from "./PrivateRoute";
+import { PrivateRoute } from "./ui/PrivateRoute";
 
 export { PrivateRoute }

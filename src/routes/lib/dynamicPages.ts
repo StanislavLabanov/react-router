@@ -1,7 +1,7 @@
 import { lazy } from "react";
 
 const dinamicPageFunction = (name: string) => {
-   return lazy(() => import(`../pages/${name}.tsx`).then(module => ({ default: module[name] })))
+   return lazy(() => import(`../../pages/${name}.tsx`).then(module => ({ default: module[name] })))
 }
 
 export const Category = dinamicPageFunction('Category')

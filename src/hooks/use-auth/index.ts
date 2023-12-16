@@ -1,3 +1,3 @@
-import { useAuth } from "./useAuth";
+import { useAuth } from "./utils/useAuth";
 
 export { useAuth }

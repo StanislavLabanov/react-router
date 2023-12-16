@@ -1,4 +1,5 @@
-import { callbackType, setUserType } from "./type";
+import { callbackType, setUserType } from "../../type/type"
+
 
 export const singIn = (newUser: string, callback: callbackType, setUser: setUserType) => {
    setUser(newUser)
