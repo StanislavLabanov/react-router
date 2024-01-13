@@ -29,19 +29,15 @@ export const Category: FC = () => {
    return (
       <>
          <h1>{params.name?.toUpperCase()}</h1>
-         <ErrorBoundary>
-            <>
-               <ul>
-                  {
-                     list.map((el, index) =>
-                        <li ref={list.length === index + 1 ? lastNodeRef : undefined} key={el.id} >{el.name}</li>
-                     )
-                  }
-               </ul>
-               {loading && <div>Loading...</div>}
-               {error && <div>Error...</div>}
-            </>
-         </ErrorBoundary>
+         <ul>
+            {
+               list.map((el, index) =>
+                  <li ref={list.length === index + 1 ? lastNodeRef : undefined} key={el.id} >{el.name}</li>
+               )
+            }
+         </ul>
+         {loading && <div>Loading...</div>}
+         {error && <div>Error...</div>}
       </>
    )
 }
